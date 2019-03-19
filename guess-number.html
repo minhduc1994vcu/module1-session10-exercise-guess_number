@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function creatASecretNumber() {
+        return Math.floor(Math.random() * 101);
+    }
+    let secret_num = creatASecretNumber();
+    console.log("the secret number is" + secret_num);
+
+    let input_num = parseInt(prompt('enter a number'));
+    console.log("the number which you guessed: " + input_num);
+    while (input_num !== secret_num) {
+
+        if (input_num > secret_num) {
+            alert("to high");
+        }
+        else if (input_num < secret_num) {
+            alert("to low");
+        }
+        else {
+            break;
+        }
+        input_num = parseInt(prompt('enter a number'));
+        console.log(input_num);
+    }
+    if (input_num === secret_num) {
+        alert("you guessed exactly. The answer is:" + secret_num)
+    }
+</script>
+
+</body>
+</html>
